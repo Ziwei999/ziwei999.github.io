@@ -1,11 +1,178 @@
-body{
+:root{
 	--base-size: 12px;
 	--primary-color: black;
-	--color-seconday: blueviolet;
-	--color-balckground: white;
+	--color-seconday: orange;
+	--text-color:white;
+	--color-balckground: rgb(223, 229, 230);
 	--gutter:calc(3 * var(var(--base-size)));
+	--border-style: 2px solid black;
+	--header-font: "Montserrat", serif;
+	--p-font: "DM Sans", serif;
 }
 
-p{
-	color: blueviolet;
+body{
+	background-color: var(--color-balckground);
+}
+
+.navbar{
+    overflow: hidden;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    padding-bottom: 20px;
+    margin-right: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: var(--text-color);
+    text-align: center;
+    padding: 14px 18px;
+    text-decoration: none;
+    background-color:var(--primary-color);
+    width: -webkit-fill-available;
+  }
+
+  
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+  
+.navbar a:hover, .dropdown:hover {
+    background-color: var(--text-color);
+}
+  
+.dropdown:hover{
+    display: block;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+
+header{
+	/* background-color: var(--color-balckground); */
+	padding-block: calc(5 * var(--base-size));
+	text-align: center;
+	border-top: var(--border-style);
+	border-bottom: var(--border-style);
+}
+
+h1, h2{
+	font-family: var(--header-font);
+}
+
+h3, p{
+	font-family: var(--p-font);
+}
+
+section{
+	
+	text-align: center;
+}
+
+.semester{
+	border-bottom: var(--border-style);
+	border-top: var(--border-style);
+	margin-top: 10vh;
+}
+
+.project1, .project2, .project3{
+	border: var(--border-style);
+	block-size: 20vh;
+	margin-top: 10vh;
+	
+}
+
+.project1{
+	background-color: #8B2B2F;
+}
+
+.project2{
+	background-color: #E99C32;
+}
+
+.project3{
+	background-color: #4E6726;
+}
+
+footer{
+	margin-top: 10vh;
+	background-color: var(--primary-color);
+	color: var(--text-color);
+	
+}
+
+footer p{
+	padding: calc(2 * var(--base-size));
+}
+
+.gutters{
+	padding-inline: var(--gutter);
+}
+
+a{
+	color: var(--primary-color);
+}
+
+@media (min-width:600px){
+	:root{
+		--gutter:calc(3 * var(var(--base-size)));
+		--base-size: 20px;
+
+	}
+
+	h1{
+		font-size: 2.5rem;
+	}
+
+	h2{
+		font-size: 1.5rem;
+	}
+}
+
+@media (min-width:1024px){
+
+	article{
+		/* display: flex;
+	    flex-direction: row;  */
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: auto;
+	}
+
+	.navbar a {
+		font-size: 2rem;
+	}
+
+	h1{
+		font-size: 4rem;
+	}
+
+	h2{
+		font-size: 3rem;
+	}
+
+	h3{
+		font-size: 2rem;
+	}
+
+	p{
+		font-size: 1.5rem;
+	}
+
+	.semester{
+		grid-column: 1/span 3;
+	}
+
+	.project1, .project2, .project3{
+		margin-left: 10vh;
+		block-size: 50vh;
+	}
+	
 }
