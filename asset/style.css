@@ -1,0 +1,11 @@
+body{
+	--base-size: 12px;
+	--primary-color: black;
+	--color-seconday: blueviolet;
+	--color-balckground: white;
+	--gutter:calc(3 * var(var(--base-size)));
+}
+
+p{
+	color: blueviolet;
+}
