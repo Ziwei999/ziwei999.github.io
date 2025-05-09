@@ -8,13 +8,17 @@
 	--border-style: 2px solid black;
 	--header-font: "Montserrat", serif;
 	--p-font: "DM Sans", serif;
+	--min-size: 1rem;
+	--mid-size: 2rem;
+	--regular-size: 5.625rem;
+	--large-size: 11.25rem;
 }
 
 body{
 	/* background-color: var(--color-balckground); */
 	background-color: var(--text-color);
-	margin-left: 1rem;
-	margin-right: 1rem;
+	margin-left: var(--min-size);
+	margin-right: var(--min-size);
 	
 }
 .navbar{
@@ -74,8 +78,17 @@ h1, h2{
 	font-family: var(--header-font);
 }
 
+h3{
+	text-align: center;
+}
+
 h3, p{
 	font-family: var(--p-font);
+}
+
+p{
+	padding-left: var(--mid-size);
+    padding-right:var(--mid-size);
 }
 
 section{
@@ -98,14 +111,15 @@ section{
 .semester{
 	border-bottom: var(--border-style);
 	border-top: var(--border-style);
-	margin-top: 10vh;
+	margin-top: var(--regular-size);
 }
 
-.project1, .project2, .project3, .project4, .project5{
+.project1, .project2, .project4, .project5{
 	border: var(--border-style);
-	block-size: 20vh;
-	margin-top: 10vh;
+	block-size: var(--large-size);
+	margin-top: var(--regular-size);
 	border-radius: 20px;
+	padding-bottom: 3rem;
 	
 }
 
@@ -125,13 +139,34 @@ section{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
+	border: var(--border-style);
+	block-size: var(--large-size);
+	margin-top: var(--regular-size);
+	border-radius: 20px;
+	height: 12rem;
 }
 
 .title{
 	position: absolute;
   /* top: 50%; */
-   left: 35%;
+   /* left: 35%; */
   /* transform: translate(-50%, -50%); */
+}
+
+.proj3, .proj{
+	/* background-color: rgba(0, 0, 0, 0.5); */
+	color: black;
+	margin-left: 1rem;
+	padding: .5rem;
+	border-radius: 10px;
+}
+
+.proj3{
+	margin-right: 2rem;
+}
+
+.proj{
+	margin-right: 1rem;
 }
 
 
@@ -177,7 +212,7 @@ section{
 
 
 footer{
-	margin-top: 10vh;
+	margin-top: var(--regular-size);
 	background-color: var(--primary-color);
 	color: var(--text-color);
 	
@@ -224,7 +259,7 @@ a{
 		position: sticky;
 		top: 0;
 		padding-bottom: 20px;
-		margin-right: 5px;
+		/* margin-right: 5px; */
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 		
@@ -259,12 +294,23 @@ a{
 	}
 
 	p{
-		font-size: 1rem;
+		/* font-size: 1rem; */
 	}
 
 	.project1, .project2, .project3{
 		/* margin: 5vh; */
 		block-size: 50vh;
+	}
+
+	.title{
+		position: absolute;
+		transform: translate(10%, 0%);
+	  
+	}
+
+	.proj3, .proj{
+		margin-top: 8rem;
+		font-size: 1.5rem;
 	}
 }
 
@@ -281,11 +327,11 @@ a{
 	}
 
 	h1{
-		font-size: 3.5rem;
+		font-size: 2.5rem;
 	}
 
 	h2{
-		font-size: 2rem;
+		font-size: 1.5rem;
 	}
 
 	h3{
@@ -293,7 +339,7 @@ a{
 	}
 
 	p{
-		font-size: 1rem;
+		/* font-size: 1rem; */
 	}
 	article{
 		/* display: flex;
@@ -315,10 +361,22 @@ a{
 
 	.project3{
 		margin: 3vh;
-		block-size: 50vh;
+		block-size: 54vh;
 	}
 	.title{
-		left: 72%;
+		/* left: 72%; */
+		margin-top: 1rem;
+		transform: translate(-10%, 0%);
+	}
+
+	.proj3{
+		margin-right: 4rem;
+		margin-left: 4rem;
+	}
+
+	.proj3, .proj{
+		margin-top: 5rem;
+		font-size: 1rem;
 	}
 
 	/* .project1, .project2, .project3{
@@ -329,13 +387,13 @@ a{
 	} */
 }
 
-@media (min-width:1166px){
+/* @media (min-width:1166px){
 	h1{
 		font-size: 4.5rem;
 	}
 
 	
-}
+} */
 
 @media (min-width:1440px){
 
@@ -370,6 +428,8 @@ a{
 
 	h3{
 		font-size: 2rem;
+		/* margin-left: 3rem; */
+		text-align: center;
 	}
 
 	p{
@@ -381,15 +441,39 @@ a{
 		grid-column: 1/span 3;
 	}
 
-	.project1, .project2, .project3, .project4, .project5{
+	.project1, .project2, .project4, .project5{
 		margin: 5vh;
 		block-size: 50vh;
 	}
+
+	.project3{
+		margin: 5vh;
+		block-size: 52vh;
+		
+	}
 	.title{
 		position: absolute;
+        /* margin-top: 1rem; */
+		transform: translate(-15%, 0%);
 	  /* top: 50%; */
-	   left: 75%;
+	   /* left: 75%; */
 	  /* transform: translate(-50%, -50%); */
+	}
+
+	.title h2, .title h3{
+		transform: translate(5%, 0%);
+		/* text-align: center; */
+	}
+
+
+
+	.proj3{
+		margin-right: 5rem;
+		margin-left: 8rem;
+	}
+	.proj3, .proj{
+		margin-top: 10rem;
+		font-size: 2rem;
 	}
 	
 }
