@@ -433,7 +433,7 @@ a{
 	}
 
 	p{
-		font-size: 1.5rem;
+		/* font-size: 1.5rem; */
 	}
 
 	.semester{
@@ -469,11 +469,12 @@ a{
 
 	.proj3{
 		margin-right: 5rem;
-		margin-left: 8rem;
+		margin-left: 7rem;
+		
 	}
 	.proj3, .proj{
-		margin-top: 10rem;
-		font-size: 2rem;
+		margin-top: 8rem;
+		font-size: 1.5rem;
 	}
 	
 }
